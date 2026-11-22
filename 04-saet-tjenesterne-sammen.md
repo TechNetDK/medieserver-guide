@@ -17,7 +17,7 @@ i stedet for en IP, fx `http://sonarr:8989`.
 ## 3. Sonarr og Radarr – `:8989` og `:7878`
 - **Media Management → Root Folders:** `/data/serier` (Sonarr) og `/data/film` (Radarr).
 - Slå **Use Hardlinks instead of Copy** til.
-- **Download Clients:** Tilføj qBittorrent – host `qbittorrent`, port `8080`.
+- **Download Clients:** Tilføj qBittorrent – host `qbittorrent`, port `8080` (bruger du VPN fra kapitel 08: host `gluetun`).
 
 ## 4. Bazarr – `:6767`
 - **Settings → Sonarr/Radarr:** host `sonarr` / `radarr` + API-nøgle.
