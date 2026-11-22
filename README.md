@@ -34,6 +34,7 @@ Jellyfin viser den på TV, mobil og PC
 | Bazarr | Undertekster | 6767 |
 | qBittorrent | Download-klient | 8080 |
 | cloudflared | Adgang udefra uden åbne porte | – |
+| Gluetun | VPN til download-klienten (valgfri) | 8080 (qBittorrents webgrænseflade, når VPN bruges) |
 
 ## Indhold
 
@@ -46,5 +47,6 @@ Jellyfin viser den på TV, mobil og PC
 | 05 | [Adgang udefra](05-adgang-udefra.md) |
 | 06 | [Backup og drift](06-backup-og-drift.md) |
 | 07 | [Fejl jeg har ramt, og løsningerne](07-fejl-og-loesninger.md) |
+| 08 | [VPN til download-klienten](08-vpn.md) |
 
 > Brug kun indhold, du har ret til – fx dine egne film og serier eller lovlige kilder.
