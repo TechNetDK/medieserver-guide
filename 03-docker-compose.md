@@ -108,9 +108,12 @@ services:
 
 ## Start det hele
 ```bash
+touch cloudflared.env && chmod 600 cloudflared.env
+mkdir -p /mnt/media/config/seerr && chown -R 1000:1000 /mnt/media/config/seerr
 docker compose up -d
 docker compose ps
 ```
+cloudflared genstarter igen og igen, indtil du har sat tokenet i kapitel 05. Det er normalt.
 
 ## Forklaring
 | Del | Hvorfor |
@@ -120,7 +123,7 @@ docker compose ps
 | `restart: unless-stopped` | Starter igen efter genstart, men ikke hvis du selv har stoppet den. |
 | `/mnt/media:/data` | Samme sti overalt, så hardlinks virker (se kapitel 02). |
 | `container_name` | Fast navn, så fx `docker logs qbittorrent` virker. |
-| `init: true` (Seerr) | Seerr stopper og genstarter pænt. Seerr kører altid som bruger 1000, så `config/seerr` skal ejes af 1000 (det klarer `chown` i kapitel 02). |
+| `init: true` (Seerr) | Seerr stopper og genstarter pænt. Seerr kører altid som bruger 1000, så `config/seerr` skal ejes af 1000 (det klares lige før `docker compose up`). |
 | `env_file` (cloudflared) | Hemmeligheden ligger i en separat fil – ikke i compose-filen. |
 
 > qBittorrent har sin egen `environment`, fordi en liste ikke kan flettes med `x-common`.
